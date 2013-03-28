@@ -25,6 +25,11 @@ function novab3 () {
 }
 
 function novaenv () {
+  local nova_alias=${1:-""}
+
+  NOVA_ALIAS=$nova_alias
+  export NOVA_ALIAS
+
   source ~/novacli/nova-$1
 }
 
